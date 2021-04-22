@@ -2,14 +2,16 @@
 - name: Local Playbook
   hosts: localhost
   become: true
+  vars:
+    my_packages:
+      - git
+      - htop
   tasks:
-    - name: Install the lates version of {{ item }} package
+    - name: Install the latest version of packages
       apt:
         name: "{{ item }}"
         state: present
       loop:
-        - git
-        - htop
-
+        "{{ my_packages }}"
 
 ...
