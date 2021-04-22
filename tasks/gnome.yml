@@ -12,4 +12,17 @@
     key: /org/gnome/desktop/background/picture-uri
     value: "'file:///home/daniel/.wallpaper.jpg'"
     state: present
+- name: Copy lockscreen file
+  copy: 
+    src: files/cloudWallpaperLight.jpg
+    dest: /home/daniel/.lockscreen.jpg
+    owner: daniel
+    group: daniel
+    mode: 0600
+- name: Set LockScreen background
+  become_user: daniel
+  dconf: 
+    key: /org/gnome/desktop/screensaver/picture-uri
+    value: "'file:///home/daniel/.lockscreen.jpg'"
+    state: present
 ...
