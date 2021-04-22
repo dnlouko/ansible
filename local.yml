@@ -5,7 +5,7 @@
   tasks:
     - name: Install the lates version of {{ item }} package
       apt:
-        name: {{ item }}
+        name: "{{ item }}"
         state: present
       loop:
         - git
