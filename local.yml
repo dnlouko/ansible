@@ -1,11 +1,14 @@
 ---
 - name: Prepare Ubuntu
   hosts: localhost
+  become: yes
   vars:
     my_packages:
       - git
       - htop
       - python-psutil
+      - vim
+      - tree
   pre_tasks:
     - name: Update Repositories
       apt:
