@@ -1,17 +1,12 @@
 ---
-- name: Local Playbook
+- name: Prepare Ubuntu
   hosts: localhost
-  become: true
-  vars:
-    my_packages:
-      - git
-      - htop
-  tasks:
-    - name: Install the latest version of packages
+  pre_tasks:
+    - name: Update Repositories
       apt:
-        name: "{{ item }}"
-        state: present
-      loop:
-        "{{ my_packages }}"
-
+        update_cache: yes
+        changed_when: false
+  tasks:
+    - include: tasks/packages.yml
+    - include: tasks/gnome.yml
 ...
