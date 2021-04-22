@@ -1,6 +1,11 @@
 ---
 - name: Prepare Ubuntu
   hosts: localhost
+  vars:
+    my_packages:
+      - git
+      - htop
+      - python-psutil
   pre_tasks:
     - name: Update Repositories
       apt:
