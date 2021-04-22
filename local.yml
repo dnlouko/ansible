@@ -3,10 +3,13 @@
   hosts: localhost
   become: true
   tasks:
-    - name: Install htop
+    - name: Install the lates version of {{ item }} package
       apt:
-        name: htop
+        name: {{ item }}
         state: present
+      loop:
+        - git
+        - htop
 
 
 ...
