@@ -1,10 +1,9 @@
 ---
-- tasks:
-    - name: Install the latest version of packages
-      apt:
-        name: "{{ item }}"
-        state: present
-      loop:
-        "{{ my_packages }}"
+- name: Install the latest version of packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    "{{ my_packages }}"
 
 ...
