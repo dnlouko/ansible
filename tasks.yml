@@ -1,0 +1,6 @@
+---
+- name: Setup Adapta Theme Repo
+  apt_repository:
+    repo: ppa:tista/adapta
+    state: present
+...
