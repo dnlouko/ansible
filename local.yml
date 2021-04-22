@@ -1,0 +1,12 @@
+---
+- name: Local Playbook
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Install htop
+      apt:
+        name: htop
+        state: present
+
+
+...
