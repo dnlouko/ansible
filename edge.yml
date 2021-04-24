@@ -1,0 +1,9 @@
+---
+- name: Install edge Repo
+  hosts: localhost
+  become: yes
+  tasks: 
+    - name: repo Add
+      apt_repository:
+        repo: deb https://packages.microsoft.com/repos/edge stable main
+        state: absent

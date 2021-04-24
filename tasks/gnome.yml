@@ -25,4 +25,9 @@
     key: /org/gnome/desktop/screensaver/picture-uri
     value: "'file:///home/daniel/.lockscreen.jpg'"
     state: present
+- name: Change the Theme to Adapta-Nokto-Eta
+  become_user: daniel
+  dconf:
+    key: /org/gnome/desktop/interface/gtk-theme
+    value: "'Adapta-Nokto-Eta'"
 ...

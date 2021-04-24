@@ -1,0 +1,7 @@
+---
+- name: Download zoom package
+  get_url:
+    url: https://zoom.us/client/5.4.53391.1108/zoom_i386.deb
+    dest: /etc/downloads/zoom_i386.deb
+    force: no
+...

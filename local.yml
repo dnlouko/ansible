@@ -10,6 +10,8 @@
       - vim
       - tree
       - openssh-server
+      - adapta-gtk-theme
+      - gnome-tweaks
   pre_tasks:
     - name: Update Repositories
       apt:
@@ -17,6 +19,7 @@
       changed_when: false
   tasks:
     - include: tasks/repositories.yml
+    - include: tasks/rpm_keys.yml
     - include: tasks/packages.yml
     - include: tasks/gnome.yml
     - include: tasks/firewall.yml

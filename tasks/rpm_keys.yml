@@ -1,0 +1,12 @@
+---
+- name: Install RPM package
+  apt:
+    name: rpm
+    state: present
+
+- name: Import Zoom Key
+  rpm_key:
+    key: https://zoom.us/linux/download/pubkey
+    fingerprint: 3960 60CA DD8A 7522 0BFC B369 B903 BF18 61A7 C71D
+  # Instructions on https://zoom.us/download?os=linux
+...

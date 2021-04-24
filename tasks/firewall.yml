@@ -1,8 +1,7 @@
 ---
 - name: Setup firewall rule for SSH
-  firewalld:
-    service: ssh
-    permanent: true
-    immediate: true
+  ufw:
+    rule: limit
+    name: OpenSSH
     state: enabled
 ...
