@@ -12,6 +12,8 @@
       - openssh-server
       - adapta-gtk-theme
       - gnome-tweaks
+      - snapd
+      - snapd-xdg-open
   pre_tasks:
     - name: Update Repositories
       apt:
@@ -21,6 +23,7 @@
     - include: tasks/repositories.yml
     - include: tasks/rpm_keys.yml
     - include: tasks/packages.yml
+    - include: tasks/snaps.yml
     - include: tasks/gnome.yml
     - include: tasks/firewall.yml
 ...

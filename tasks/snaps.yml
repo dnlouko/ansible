@@ -1,0 +1,6 @@
+---
+- name: Install Snap Mailspring client
+  snap:
+    name: mailspring
+    state: present
+...
