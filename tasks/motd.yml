@@ -19,7 +19,7 @@
           printf "\n"
     - name: Replace the default Last Lines
       replace:
-              path: /etc/update-motd.d/10-help-text
+        path: /etc/update-motd.d/10-help-text
         after: "# END ANSIBLE MANAGED BLOCK"
         regexp: '^printf +'
         replace: '# printf '
