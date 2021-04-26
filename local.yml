@@ -27,4 +27,5 @@
     - include: tasks/snaps.yml
     - include: tasks/gnome.yml
     - include: tasks/firewall.yml
+    - include: tasks/motd.yml
 ...
