@@ -3,6 +3,4 @@
   apt_repository:
     repo: ppa:tista/adapta
     state: present
-    update_cache: no
-    validate_certs: no
 ...

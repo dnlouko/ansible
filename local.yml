@@ -4,6 +4,7 @@
   become: yes
   vars:
     my_packages:
+      - apt-transport-https
       - git
       - htop
       - python-psutil
