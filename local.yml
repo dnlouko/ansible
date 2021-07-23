@@ -19,7 +19,7 @@
   pre_tasks:
     - name: Update Repositories
       apt:
-        allow_unauthenticated: yes
+        force_apt_get: yes
         update_cache: yes
       changed_when: false
   tasks:
