@@ -4,24 +4,22 @@
   become: yes
   vars:
     my_packages:
-      - apt-transport-https
       - git
       - htop
       - python-psutil
       - vim
       - tree
       - openssh-server
-      - adapta-gtk-theme
       - gnome-tweaks
       - snapd
       - snapd-xdg-open
       - gnome-sushi
   pre_tasks:
     - name: Update Repositories
-      command: apt-get update -y --allow-releaseinfo-change
+      apt:
+        update_cache: yes
       changed_when: false
   tasks:
-    - include: tasks/repositories.yml
     - include: tasks/rpm_keys.yml
     - include: tasks/packages.yml
     - include: tasks/snaps.yml
