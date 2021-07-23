@@ -18,9 +18,7 @@
       - gnome-sushi
   pre_tasks:
     - name: Update Repositories
-      apt:
-        force_apt_get: yes
-        update_cache: yes
+      command: apt-get update -y --allow-releaseinfo-change
       changed_when: false
   tasks:
     - include: tasks/repositories.yml
