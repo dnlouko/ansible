@@ -11,5 +11,5 @@
 - name: Install Deb Zoom package from URL
   apt:
     deb: https://zoom.us/client/5.4.53391.1108/zoom_i386.deb
-  when: zoom_check is false
+  when: zoom_check is failed
 ...
