@@ -1,0 +1,5 @@
+---
+- name: Install the packages
+  apt:
+    autoclean: yes
+    autoremove: yes

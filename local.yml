@@ -26,4 +26,5 @@
     - include: tasks/gnome.yml
     - include: tasks/firewall.yml
     - include: tasks/motd.yml
+    - include: tasks/cleanup.yml
 ...
