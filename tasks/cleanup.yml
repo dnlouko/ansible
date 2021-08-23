@@ -1,5 +1,5 @@
 ---
-- name: Install the packages
+- name: Cleanup Packages
   apt:
     autoclean: yes
     autoremove: yes
